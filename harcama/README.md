@@ -1,16 +1,23 @@
-# Kişisel Harcama Takipçisi
-C'de dosyalama mantığını pratik etmek için yazılan basit ama kullanışlı bir harcama takip programı. Uygulama arka planda terminalde çalışıyor ama sonuçları ve uyarıları direkt Windows pop-up'ları (MessageBox) ile ekrana veriyor.
+# 💰 Kişisel Harcama Takipçisi
 
-Girdiğiniz her harcamayı bir CSV dosyasına kaydediyor, böylece programı kapatsanız bile verileriniz kaybolmuyor. Üstelik harcamaları kategorilerine (Eğitim, Teknoloji, Abonelikler vb.) ayırarak toplam ne kadar harcadığınızı da tek tuşla özetleyebiliyor.
+C programlama dili ile geliştirilmiş, harcamalarınızı kaydeden ve **Windows açılır pencereleri (Pop-up)** kullanarak raporlar sunan basit ve kullanışlı bir bütçe takip uygulamasıdır.
 
-## Neler Yaptım?
-* **Kalıcı Kayıt:** Harcamalar anında `harcamalar.csv` dosyasına yazılıyor (isterseniz Excel ile de açıp bakabilirsiniz).
-* **Otomatik Tarih:** `time.h` kütüphanesini ekledim, bu sayede tarihi elle girmeye gerek kalmıyor; bilgisayarın saatinden o anı kendi çekiyor.
-* **Bütçe Analizi:** Verileri sadece alt alta listelemek yerine, kategorileri gruplayıp (Örn: Eğitime şu kadar, Teknolojiye bu kadar) genel bir rapor sunan bir analiz fonksiyonu bulunuyor.
-* **Görsel Arayüz Ufaklıkları:** Tamamen siyah ekrana bakmamak için `windows.h` kullandım, uyarılar ve raporlar ekrana açılır pencere olarak geliyor.
+## 🌟 Özellikler
 
-## Nasıl Çalıştırabilirsiniz?
+- **Yeni Harcama Ekleme:** Kategori, açıklama ve tutar girerek hızlıca harcama ekleyebilirsiniz. Tarih, bilgisayarınızdan otomatik olarak çekilir.
+- **Açılır Pencere (Pop-up) ile Listeleme:** Kaydedilen tüm harcamalar, düzenli bir tablo halinde Windows mesaj penceresinde gösterilir.
+- **Kategori Bazlı Analiz:** Hangi kategoriye (Market, Eğitim, Fatura vb.) toplam ne kadar harcadığınızı hesaplar ve genel toplam ile birlikte pop-up raporu olarak sunar.
+- **Kalıcı Veri Saklama:** Verileriniz `harcamalar.csv` adlı Excel ile de uyumlu bir dosyada güvenle saklanır.
 
-Projeyi bilgisayarınıza indirdikten sonra, terminalde kodun bulunduğu klasöre gidip şu komutla derleyebilirsiniz:
+## ⚙️ Gereksinimler
 
-gcc harcama.c -o harcama
+- **İşletim Sistemi:** Windows (Program `windows.h` kütüphanesini kullandığı için Windows ortamında çalışır).
+- **Derleyici:** Herhangi bir C derleyicisi (GCC, MinGW, Dev-C++ vb.).
+
+## 🚀 Kurulum ve Çalıştırma
+
+1. Proje dosyalarını bilgisayarınıza indirin veya `harcama_takip.c` adında bir dosya oluşturup kodu içine yapıştırın.
+2. Terminal (Komut İstemcisi) açın ve dosyanın bulunduğu dizine gidin.
+3. Kodu derlemek için şu komutu çalıştırın:
+   ```bash
+   gcc harcama_takip.c -o harcama_takip.exe
